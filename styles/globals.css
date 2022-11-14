@@ -2,6 +2,8 @@ html,
 body {
   padding: 0;
   margin: 0;
+  background: linear-gradient(90deg, #0a0035, #29005f) !important;
+  color: #dbdbdb !important;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
@@ -23,4 +25,38 @@ a {
     color: white;
     background: black;
   }
+}
+
+/* bottone menu navbar */
+
+.css-eeqq40, .css-eeqq40:active, .css-eeqq40[data-active], .css-eeqq40:hover, .css-eeqq40[data-hover] {
+  background: transparent !important;
+}
+
+/* menu navbar */
+
+.css-1fryw54:active, .css-1fryw54[data-active] {
+  background-color: black !important;
+}
+
+.css-1fryw54:focus, .css-1fryw54[data-focus] {
+  background: black !important;
+}
+
+/* navbar */
+
+.bgNavbar {
+  background: #dbdbdb !important;
+}
+
+/* footer link */
+
+.css-spn4bz {
+  color: #73eedc !important;
+  font-weight: 600;
+}
+
+.css-spn4bz:hover {
+  text-decoration: none !important;
+  font-weight: 700;
 }
