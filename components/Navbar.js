@@ -15,6 +15,7 @@ import { FcMenu, FcHome, FcAbout } from "react-icons/fc";
 const Navbar = () => (
   <Box>
     <Flex
+      background={"linear-gradient(90deg, #0a0035, #29005f)"}
       position={"fixed"}
       top={"0px"}
       justifyContent={"space-between"}

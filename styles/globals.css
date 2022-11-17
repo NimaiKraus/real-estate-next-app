@@ -44,9 +44,8 @@ a {
 }
 
 /* navbar */
-
-.bgNavbar {
-  background: #dbdbdb !important;
+.css-1br5n2g {
+  z-index: 2;
 }
 
 /* footer link */

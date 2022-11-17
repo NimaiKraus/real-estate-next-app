@@ -8,22 +8,35 @@ import { filterData, getFilterValues } from "../utils/data4Filter";
 const SearchFilter = () => {
   const router = useRouter();
   const [filters, setFilters] = useState(filterData);
+
   const searchProperties = (filterValues) => {
     const path = router.pathname;
-    const { query } = router.query;
+    const { query } = router;
     const values = getFilterValues(filterValues);
     values.forEach((item) => {
-      query[item.name] = item.value;
+      if(item.value && filterValues?.[item.name]) {
+        query[item.name] = item.value
+      }
     });
-
-    router.push({ pathname: path, query });
+      router.push({ pathname: path, query: query });
   };
+
   return (
-    <Flex justifyContent={"space-evenly"} flexWrap={"wrap"} m={"20px 0px"}>
+    <Flex
+      justifyContent={"space-evenly"}
+      flexWrap={"wrap"}
+      objectFit
+      m={"0px 0px 20px 0px"}
+    >
       {filters.map((filter) => (
         <Box key={filter.queryName} margin={"10px 30px"}>
           <Select
             placeholder={filter.placeholder}
+            borderColor={"black"}
+            color={"black"}
+            width={"180px"}
+            _hover={{borderColor: "black"}}
+            _focusVisible={{ border: "2px solid black", fontWeight: "semibold" }}
             onChange={(e) =>
               searchProperties({ [filter.queryName]: e.target.value })
             }
