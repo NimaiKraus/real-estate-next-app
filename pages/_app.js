@@ -10,7 +10,7 @@ import { useEffect } from "react";
 const GTM_ID = process.env.GTM_ID || "";
 
 const tagManagerArgs = {
-  gtmId: {GTM_ID}
+  gtmId: GTM_ID
 }
 
 function MyApp({ Component, pageProps }) {
