@@ -18,9 +18,10 @@ const Navbar = () => (
       background={"linear-gradient(90deg, #0a0035, #29005f)"}
       position={"fixed"}
       top={"0px"}
+      left={"0px"}
       justifyContent={"space-between"}
-      p={"5"}
-      w={"full"}
+      p={"10px 90px 10px 30px"}
+      w={"100vw"}
     >
       <Text
         fontWeight={"bold"}

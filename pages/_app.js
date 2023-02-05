@@ -4,6 +4,14 @@ import Layout from "../components/Layout";
 import Head from "next/head";
 import Router from "next/router";
 import NProgress from "nprogress";
+import TagManager from "react-gtm-module";
+import { useEffect } from "react";
+
+const GTM_ID = process.env.GTM_ID || "";
+
+const tagManagerArgs = {
+  gtmId: {GTM_ID}
+}
 
 function MyApp({ Component, pageProps }) {
   NProgress.configure({ showSpinner: false });
@@ -13,6 +21,11 @@ function MyApp({ Component, pageProps }) {
   Router.events.on("routeChangeComplete", () => {
     NProgress.done();
   });
+
+  useEffect(() => {
+    TagManager.initialize(tagManagerArgs);
+  }, [])
+  
   return (
     <>
       <Head>
