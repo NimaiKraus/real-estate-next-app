@@ -16,10 +16,10 @@ export default function Layout({ children }) {
           <Navbar />
         </header>
         <main>{children}</main>
+      </Box>
         <footer>
           <Footer />
         </footer>
-      </Box>
     </>
   );
 }

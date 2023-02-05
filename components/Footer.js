@@ -9,7 +9,7 @@ import {
 } from "@chakra-ui/react";
 
 const Footer = () => (
-  <Box bg={"#100f0f"} w={"full"} marginTop={"100px"} bottom={"0px"}>
+  <Box bg={"#100f0f"} w={"100vw"} marginTop={"100px"} bottom={"0px"}>
     <Container as={Stack} maxW={"6xl"} py={10}>
       <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} spacing={8}>
         <Stack align={"flex-start"}>
