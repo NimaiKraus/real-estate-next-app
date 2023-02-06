@@ -7,11 +7,6 @@ import NProgress from "nprogress";
 import TagManager from "react-gtm-module";
 import { useEffect } from "react";
 
-const GTM_ID = process.env.GTM_ID || "";
-
-const tagManagerArgs = {
-  gtmId: GTM_ID
-}
 
 function MyApp({ Component, pageProps }) {
   NProgress.configure({ showSpinner: false });
@@ -23,7 +18,7 @@ function MyApp({ Component, pageProps }) {
   });
 
   useEffect(() => {
-    TagManager.initialize(tagManagerArgs);
+    TagManager.initialize({gtmId: 'GTM-W42KJPX'});
   }, [])
   
   return (
